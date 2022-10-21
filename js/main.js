@@ -12,18 +12,7 @@ console.log(age);
 let price =(0.21 * km);
 console.log(price);
 // 5. applicare uno sconto del 20% se il passeggero è minorenne
-if (age<18) {
-    price = price-(price * 0.2);
-    console.log(price+(" minorenne"));
-    document.getElementById("age").innerHTML=("Minorenne");
-}
-// .6 applicare uno sconto del 40% se il passeggero è un over 65
-else if (age>=65) {
-    price = price-(price * 0.4);
-    console.log(price+(" over-65"));
-    document.getElementById("age").innerHTML=("Over-65");
-}
-console.log('${price.toFixed(2)}€');
+
 
 const btnGenerator = document.getElementById('btn-generator');
 btnGenerator.addEventListener('click', function() {
@@ -33,4 +22,19 @@ btnGenerator.addEventListener('click', function() {
   const km = document.getElementById('km');
   console.log(km.value);
   km.value = '';
+  let price =(0.21 * km);
+console.log(price);
+// 5. applicare uno sconto del 20% se il passeggero è minorenne
+if (age<18) {
+    price = price-(price * 0.2);
+    console.log(price+("minorenne"));
+    document.getElementById("age").innerHTML=("Minorenne");
+}
+// .6 applicare uno sconto del 40% se il passeggero è un over 65
+else if (age>=65) {
+    price = price-(price * 0.4);
+    console.log(price+(" over-65"));
+    document.getElementById("age").innerHTML=("Over-65");
+}
+console.log("${price.toFixed(2)}€");
 });
